@@ -1,0 +1,217 @@
+.projects {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 25%, #2c5364 50%, #0f2027 75%, #203a43 100%);
+  background-size: 400% 400%;
+  animation: projectGradient 15s ease infinite;
+  padding: 50px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes projectGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(7, 137, 48, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(252, 221, 9, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(218, 18, 26, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+  animation: pulseProjects 10s ease-in-out infinite;
+}
+
+@keyframes pulseProjects {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.projects::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.section-title {
+  position: relative;
+  z-index: 2;
+  color: #FFFFFF !important;
+  text-shadow: 0 0 30px rgba(44, 83, 100, 0.8), 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.section-title {
+  position: relative;
+  z-index: 2;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.project-card {
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ethiopian Flag Colors */
+.project-green {
+  background: linear-gradient(135deg, #078930 0%, #0FAF4A 50%, #0a6b2a 100%);
+  border-color: rgba(7, 137, 48, 0.5);
+}
+
+.project-yellow {
+  background: linear-gradient(135deg, #FCDD09 0%, #FFE84D 50%, #e6c700 100%);
+  border-color: rgba(252, 221, 9, 0.5);
+}
+
+.project-red {
+  background: linear-gradient(135deg, #DA121A 0%, #FF3B47 50%, #b30f15 100%);
+  border-color: rgba(218, 18, 26, 0.5);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.project-green:hover {
+  box-shadow: 0 12px 30px rgba(7, 137, 48, 0.5);
+}
+
+.project-yellow:hover {
+  box-shadow: 0 12px 30px rgba(252, 221, 9, 0.5);
+}
+
+.project-red:hover {
+  box-shadow: 0 12px 30px rgba(218, 18, 26, 0.5);
+}
+
+.project-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+}
+
+.project-yellow .project-content h3 {
+  color: #1a1a1a;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.project-content p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.9rem;
+}
+
+.project-yellow .project-content p {
+  color: #2a2a2a;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  padding: 0.25rem 0.6rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.project-yellow .tech-tag {
+  background: rgba(0, 0, 0, 0.15);
+  color: #1a1a1a;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.project-links {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.project-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  font-size: 0.85rem;
+}
+
+.project-yellow .project-links a {
+  background: rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 0, 0, 0.3);
+  color: #1a1a1a;
+}
+
+.project-links a:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-yellow .project-links a:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
